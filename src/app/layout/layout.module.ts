@@ -4,18 +4,17 @@ import { HeaderComponent } from './header/header.component';
 import { NavComponent } from './nav/nav.component';
 import { FooterComponent } from './footer/footer.component';
 
-
-
 @NgModule({
   declarations: [
-  
     HeaderComponent,
     NavComponent,
-    FooterComponent,
-       
+    FooterComponent, 
   ],
   imports: [
     CommonModule
+  ],
+  exports: [
+    HeaderComponent,NavComponent, FooterComponent, 
   ]
 })
 export class LayoutModule { }

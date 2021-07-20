@@ -6,7 +6,6 @@ import { RegistroComponent } from './registro/registro.component';
 import { IniciarSesionComponent } from './iniciar-sesion/iniciar-sesion.component';
 
 
-
 @NgModule({
   declarations: [
     ServiciosComponent,
@@ -16,6 +15,12 @@ import { IniciarSesionComponent } from './iniciar-sesion/iniciar-sesion.componen
   ],
   imports: [
     CommonModule
+  ],
+  exports:[
+    ServiciosComponent,
+    QuienesSomosComponent,
+    RegistroComponent,
+    IniciarSesionComponent
   ]
 })
 export class PagesModule { }
