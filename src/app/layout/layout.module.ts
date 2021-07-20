@@ -10,8 +10,8 @@ import { FooterComponent } from './footer/footer.component';
   declarations: [
   
     HeaderComponent,
-       NavComponent,
-       FooterComponent,
+    NavComponent,
+    FooterComponent,
        
   ],
   imports: [
