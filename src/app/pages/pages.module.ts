@@ -7,6 +7,9 @@ import { IniciarSesionComponent } from './iniciar-sesion/iniciar-sesion.componen
 import { Pagina404Component } from './pagina404/pagina404.component';
 import { IntegranteComponent } from './integrante/integrante.component';
 import { RouterModule } from '@angular/router';
+import { OperacionesComponent } from './operaciones/operaciones.component';
+import { TransaccionesComponent } from './transacciones/transacciones.component';
+import { CriptomonedaComponent } from './criptomoneda/criptomoneda.component';
 
 
 @NgModule({
@@ -16,7 +19,10 @@ import { RouterModule } from '@angular/router';
     RegistroComponent,
     IniciarSesionComponent,
     Pagina404Component,
-    IntegranteComponent
+    IntegranteComponent,
+    OperacionesComponent,
+    TransaccionesComponent,
+    CriptomonedaComponent
   
   ],
   imports: [
