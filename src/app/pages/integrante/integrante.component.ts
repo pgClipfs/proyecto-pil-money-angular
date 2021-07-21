@@ -8,8 +8,7 @@ import { ActivatedRoute,Params} from '@angular/router';
 })
 export class IntegranteComponent implements OnInit {
 
-  integrante:string ="";
-  integranteId:number=0;
+  id:number=0;
 
   constructor(private rutaActiva: ActivatedRoute) { 
    
@@ -19,20 +18,12 @@ export class IntegranteComponent implements OnInit {
    
       this.rutaActiva.params.subscribe(
         (params: Params) => {
-          this.integrante = params.integrante;
+          this.id = params.id;
          
         }
       );
 
-      if (this.integrante =="federico")
-      {this.integranteId=1;}
-
-      if (this.integrante =="diana")
-      {this.integranteId=2;}
-
-      if (this.integrante =="joaquin")
-      {this.integranteId=3;}
-   
+      
   }
 
 }

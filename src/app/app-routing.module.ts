@@ -10,7 +10,7 @@ import { ServiciosComponent } from './pages/servicios/servicios.component';
 const routes: Routes = [
   {path: 'inicio', component:ServiciosComponent},
   {path: 'quienes-somos', component: QuienesSomosComponent},
-  {path: 'quienes-somos/:integrante', component: IntegranteComponent},
+  {path: 'quienes-somos/:id', component: IntegranteComponent},
   {path: 'registro', component:RegistroComponent},
   {path: 'iniciar-sesion', component: IniciarSesionComponent},
   {path: '', redirectTo: '/inicio', pathMatch: 'full'},

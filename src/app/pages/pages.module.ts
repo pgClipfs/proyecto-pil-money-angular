@@ -6,6 +6,7 @@ import { RegistroComponent } from './registro/registro.component';
 import { IniciarSesionComponent } from './iniciar-sesion/iniciar-sesion.component';
 import { Pagina404Component } from './pagina404/pagina404.component';
 import { IntegranteComponent } from './integrante/integrante.component';
+import { RouterModule } from '@angular/router';
 
 
 @NgModule({
@@ -16,9 +17,11 @@ import { IntegranteComponent } from './integrante/integrante.component';
     IniciarSesionComponent,
     Pagina404Component,
     IntegranteComponent
+  
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    RouterModule
   ],
   exports:[
     ServiciosComponent,
