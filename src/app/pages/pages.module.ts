@@ -4,6 +4,7 @@ import { ServiciosComponent } from './servicios/servicios.component';
 import { QuienesSomosComponent } from './quienes-somos/quienes-somos.component';
 import { RegistroComponent } from './registro/registro.component';
 import { IniciarSesionComponent } from './iniciar-sesion/iniciar-sesion.component';
+import { Pagina404Component } from './pagina404/pagina404.component';
 
 
 @NgModule({
@@ -11,7 +12,8 @@ import { IniciarSesionComponent } from './iniciar-sesion/iniciar-sesion.componen
     ServiciosComponent,
     QuienesSomosComponent,
     RegistroComponent,
-    IniciarSesionComponent
+    IniciarSesionComponent,
+    Pagina404Component
   ],
   imports: [
     CommonModule
