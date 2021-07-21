@@ -1,0 +1,37 @@
+
+<div [ngSwitch]="integranteId">
+    <div *ngSwitchCase="1" class="container">
+        <div class="row">
+            <div class="col">
+                <img   src="assets/img/team/1.jpg" alt="">
+            </div>
+            <div class="col">
+                <h1 class="mt-5 display-4 ">{{integrante}}</h1>
+                <h3>Desarrollador Web</h3>
+            </div>
+        </div>
+    </div>
+    <div *ngSwitchCase="2" class="container">
+        <div class="row">
+            <div class="col">
+                <img   src="assets/img/team/2.jpg" alt="">
+            </div>
+            <div class="col">
+                <h1 class="mt-5 display-4 ">{{integrante}}</h1>
+                <h3>Desarrollador Web</h3>
+            </div>
+        </div>
+    </div>
+    <div *ngSwitchCase="3" class="container">
+        <div class="row">
+            <div class="col">
+                <img   src="assets/img/team/3.jpg" alt="">
+            </div>
+            <div class="col">
+                <h1 class="mt-5 display-4 ">{{integrante}}</h1>
+                <h3 class="display-5">Diseñador</h3>
+            </div>
+        </div>
+    </div>
+    <p *ngSwitchDefault>...</p>
+</div>
