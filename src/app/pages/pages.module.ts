@@ -11,6 +11,7 @@ import { OperacionesComponent } from './operaciones/operaciones.component';
 import { TransaccionesComponent } from './transacciones/transacciones.component';
 import { CriptomonedaComponent } from './criptomoneda/criptomoneda.component';
 import { HomeComponent } from './home/home.component';
+import { MovimientosComponent } from './movimientos/movimientos.component';
 
 
 @NgModule({
@@ -24,7 +25,8 @@ import { HomeComponent } from './home/home.component';
     OperacionesComponent,
     TransaccionesComponent,
     CriptomonedaComponent,
-    HomeComponent
+    HomeComponent,
+    MovimientosComponent
   
   ],
   imports: [

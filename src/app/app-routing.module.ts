@@ -10,6 +10,7 @@ import { QuienesSomosComponent } from './pages/quienes-somos/quienes-somos.compo
 import { RegistroComponent } from './pages/registro/registro.component';
 import { ServiciosComponent } from './pages/servicios/servicios.component';
 import { TransaccionesComponent } from './pages/transacciones/transacciones.component';
+import { MovimientosComponent } from './pages/movimientos/movimientos.component';
 
 const routes: Routes = [
   {path: 'iniciar-sesion', component: IniciarSesionComponent,
@@ -19,6 +20,7 @@ const routes: Routes = [
           {path:'operaciones', component: OperacionesComponent},
           {path:'transacciones', component: TransaccionesComponent},
           {path:'criptomoneda', component: CriptomonedaComponent},
+          {path:'movimientos', component: MovimientosComponent},
         ]},
     ]
   },

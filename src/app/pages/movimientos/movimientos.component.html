@@ -1,0 +1,14 @@
+<h1 class="display-5">Ultimos Movimientos</h1>
+<h2>{{hoy|date: "d/M/yy"}}</h2>
+<table *ngIf="mostrarMovimientos" class="table">
+    <thead>
+        <th>Operación</th>
+        <th>Monto</th>
+    </thead>
+    <tbody>
+        <tr *ngFor="let element of movimientos" >
+            <td>{{element.operacion}}</td>
+            <td>{{element.monto|currency}}</td>
+        </tr>
+    </tbody>
+</table>
