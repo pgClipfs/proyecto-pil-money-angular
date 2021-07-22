@@ -10,6 +10,7 @@ import { RouterModule } from '@angular/router';
 import { OperacionesComponent } from './operaciones/operaciones.component';
 import { TransaccionesComponent } from './transacciones/transacciones.component';
 import { CriptomonedaComponent } from './criptomoneda/criptomoneda.component';
+import { HomeComponent } from './home/home.component';
 
 
 @NgModule({
@@ -22,7 +23,8 @@ import { CriptomonedaComponent } from './criptomoneda/criptomoneda.component';
     IntegranteComponent,
     OperacionesComponent,
     TransaccionesComponent,
-    CriptomonedaComponent
+    CriptomonedaComponent,
+    HomeComponent
   
   ],
   imports: [

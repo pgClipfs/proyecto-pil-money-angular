@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { CriptomonedaComponent } from './pages/criptomoneda/criptomoneda.component';
+import { HomeComponent } from './pages/home/home.component';
 import { IniciarSesionComponent } from './pages/iniciar-sesion/iniciar-sesion.component';
 import { IntegranteComponent } from './pages/integrante/integrante.component';
 import { OperacionesComponent } from './pages/operaciones/operaciones.component';
@@ -13,11 +14,15 @@ import { TransaccionesComponent } from './pages/transacciones/transacciones.comp
 const routes: Routes = [
   {path: 'iniciar-sesion', component: IniciarSesionComponent,
     children: [
-      {path:'operaciones', component: OperacionesComponent},
-      {path:'transacciones', component: TransaccionesComponent},
-      {path:'criptomoneda', component: CriptomonedaComponent},
+      {path:'home', component: HomeComponent,
+        children:[
+          {path:'operaciones', component: OperacionesComponent},
+          {path:'transacciones', component: TransaccionesComponent},
+          {path:'criptomoneda', component: CriptomonedaComponent},
+        ]},
     ]
   },
+ 
   {path:'servicios', component: ServiciosComponent},
   {path: 'quienes-somos', component: QuienesSomosComponent},
   {path: 'quienes-somos/:id', component: IntegranteComponent},
