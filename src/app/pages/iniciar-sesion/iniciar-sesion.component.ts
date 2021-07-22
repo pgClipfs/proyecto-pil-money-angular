@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {  FormBuilder, FormGroup , Validators} from '@angular/forms';
 
 @Component({
   selector: 'app-iniciar-sesion',
@@ -6,10 +7,27 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./iniciar-sesion.component.css']
 })
 export class IniciarSesionComponent implements OnInit {
-
-  constructor() { }
+  form:FormGroup;
+  constructor(private formBuilder: FormBuilder) {
+    this.form= this.formBuilder.group(
+      {
+        password:['',[Validators.required, Validators.minLength(8)]],
+        mail:['', [Validators.required, Validators.email]]   
+      }
+    )
+   }
 
   ngOnInit(): void {
   }
 
+  get Password()
+  {
+    return this.form.get("password");
+  }
+
+  get Mail()
+  {
+   return this.form.get("mail");
+  }
+  
 }

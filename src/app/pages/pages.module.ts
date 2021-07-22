@@ -12,7 +12,7 @@ import { TransaccionesComponent } from './transacciones/transacciones.component'
 import { CriptomonedaComponent } from './criptomoneda/criptomoneda.component';
 import { HomeComponent } from './home/home.component';
 import { MovimientosComponent } from './movimientos/movimientos.component';
-
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -31,7 +31,8 @@ import { MovimientosComponent } from './movimientos/movimientos.component';
   ],
   imports: [
     CommonModule,
-    RouterModule
+    RouterModule,
+    ReactiveFormsModule
   ],
   exports:[
     ServiciosComponent,
