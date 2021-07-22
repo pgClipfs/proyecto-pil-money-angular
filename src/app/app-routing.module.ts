@@ -18,11 +18,11 @@ const routes: Routes = [
       {path:'criptomoneda', component: CriptomonedaComponent},
     ]
   },
-  {path:'', component: ServiciosComponent},
+  {path:'servicios', component: ServiciosComponent},
   {path: 'quienes-somos', component: QuienesSomosComponent},
   {path: 'quienes-somos/:id', component: IntegranteComponent},
   {path: 'registro', component:RegistroComponent},
-  {path: '', redirectTo: '/inicio', pathMatch: 'full'},
+  {path: '', redirectTo: '/servicios', pathMatch: 'full'},
   {path: '**', component: Pagina404Component},
 ];
 
