@@ -13,18 +13,14 @@ import { TransaccionesComponent } from './pages/transacciones/transacciones.comp
 import { MovimientosComponent } from './pages/movimientos/movimientos.component';
 
 const routes: Routes = [
-  {path: 'iniciar-sesion', component: IniciarSesionComponent,
-    children: [
-      {path:'home', component: HomeComponent,
-        children:[
-          {path:'operaciones', component: OperacionesComponent},
-          {path:'transacciones', component: TransaccionesComponent},
-          {path:'criptomoneda', component: CriptomonedaComponent},
-          {path:'movimientos', component: MovimientosComponent},
-        ]},
-    ]
-  },
- 
+  {path: 'iniciar-sesion', component: IniciarSesionComponent},
+  {path:'home', component: HomeComponent,
+  children:[
+    {path:'operaciones', component: OperacionesComponent},
+    {path:'transacciones', component: TransaccionesComponent},
+    {path:'criptomoneda', component: CriptomonedaComponent},
+    {path:'movimientos', component: MovimientosComponent},
+  ]},
   {path:'servicios', component: ServiciosComponent},
   {path: 'quienes-somos', component: QuienesSomosComponent},
   {path: 'quienes-somos/:id', component: IntegranteComponent},

@@ -30,4 +30,28 @@ export class IniciarSesionComponent implements OnInit {
    return this.form.get("mail");
   }
   
+  onEnviar(event: Event)
+  {
+    event.preventDefault; 
+
+    if (this.form.valid)
+    {
+      alert ("Enviar al servidor...")
+    }
+    else
+    {
+      this.form.markAllAsTouched(); 
+    }
+
+  }
+
+  get PasswordValid()
+  {
+    return this.Password?.touched && !this.Password?.valid;
+  }
+
+  get MailValid()
+  {
+    return this.Mail?.touched && !this.Mail?.valid;
+  }
 }
