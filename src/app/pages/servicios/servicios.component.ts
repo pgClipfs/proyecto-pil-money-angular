@@ -12,4 +12,9 @@ export class ServiciosComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  onSaludar(event: Event): void {
+    alert("Hola mundo!!");
+    alert(event);
+  }
+
 }
