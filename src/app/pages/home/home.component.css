@@ -1,0 +1,5 @@
+
+  a:link {text-decoration:none; color:black; background:darkorange; } /* Link no visitado*/
+  a:visited {text-decoration:none;color:black;} /*Link visitado*/
+  a:active {text-decoration:none; color:white; background:rgb(61, 61, 61);} /*border:#FFFFFF 1px solid;} /*Link activo*/
+  a:hover {text-decoration:none; color:white; background:rgb(61, 61, 61);} /*Mause sobre el link*/
