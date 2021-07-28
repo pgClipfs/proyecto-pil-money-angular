@@ -14,6 +14,7 @@ import { HomeComponent } from './home/home.component';
 import { MovimientosComponent } from './movimientos/movimientos.component';
 import { ReactiveFormsModule } from '@angular/forms';
 
+
 @NgModule({
   declarations: [
     ServiciosComponent,
@@ -34,11 +35,6 @@ import { ReactiveFormsModule } from '@angular/forms';
     RouterModule,
     ReactiveFormsModule
   ],
-  exports:[
-    ServiciosComponent,
-    QuienesSomosComponent,
-    RegistroComponent,
-    IniciarSesionComponent
-  ]
+ 
 })
 export class PagesModule { }

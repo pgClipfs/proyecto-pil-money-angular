@@ -8,7 +8,7 @@
         <div class="col-md-12 login-form">
             <form [formGroup]="form"  (ngSubmit)="onEnviar($event)"  >    
                 <div class="m-3">
-                    <label for="exampleInputEmail1" class="form-label">Email</label>
+                    <label for="email" class="form-label">Email</label>
                     <input type="email" class="form-control" formControlName="mail" [class.border-danger]="MailValid">
                     <div *ngIf="Mail?.errors  && Mail?.touched">
                         <p *ngIf="Mail?.hasError('required')" class="text-danger">
@@ -20,7 +20,7 @@
                       </div>
                     </div>
                 <div class="m-3">
-                    <label for="exampleInputPassword1" class="form-label" >Password</label>
+                    <label for="password" class="form-label" >Password</label>
                     <input type="password" class="form-control" formControlName="password" [class.border-danger]="PasswordValid">
                     <div *ngIf="Password?.errors  && Password?.touched">
                         <p *ngIf="Password?.hasError('required')" class="text-danger">
