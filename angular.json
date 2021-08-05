@@ -32,6 +32,7 @@
             ],
             "scripts": [
               "node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"
+             
             ]
           },
           "configurations": {
@@ -105,5 +106,8 @@
       }
     }
   },
-  "defaultProject": "app"
+  "defaultProject": "app",
+  "cli": {
+    "analytics": "35971d96-9131-49e5-a5b8-b2c04b77f067"
+  }
 }

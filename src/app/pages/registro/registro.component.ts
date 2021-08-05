@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import { UsuarioService , Usuario} from 'src/app/services/usuario.service';
 @Component({
   selector: 'app-registro',
   templateUrl: './registro.component.html',

@@ -1,41 +1,43 @@
+  
 <div class="container">
-    <div class="row">
-        <div class="col-md-12 login-form-header">
-            <p class="login-form-font-header">Iniciar<span> Sesión</span><p>
-        </div>
-    </div>
-    <div class="row m-3">
-        <div class="col-md-12 login-form">
-            <form [formGroup]="form"  (ngSubmit)="onEnviar($event)"  >    
-                <div class="m-3">
-                    <label for="exampleInputEmail1" class="form-label">Email</label>
-                    <input type="email" class="form-control" formControlName="mail" [class.border-danger]="MailValid">
-                    <div *ngIf="Mail?.errors  && Mail?.touched">
-                        <p *ngIf="Mail?.hasError('required')" class="text-danger">
-                          El email es requerido.
-                        </p>
-                        <p *ngIf="Mail?.hasError('email')" class="text-danger">
-                          El formato del email debe ser válido.
-                        </p>
-                      </div>
+  <div class="row">
+      <div class="col-md-12 login-form-header">
+          <p class="login-form-font-header">Iniciar<span> Sesión</span><p>
+      </div>
+  </div>
+  <div class="row m-3">
+      <div class="col-md-12 login-form">
+          <form [formGroup]="form" (ngSubmit)="onSubmit()">    
+              <div class="m-3">
+                  <label for="email" class="form-label">Email</label>
+                  <input type="email" class="form-control" formControlName="mail" [class.border-danger]="MailValid">
+                  <div *ngIf="Mail?.errors  && Mail?.touched">
+                      <p *ngIf="Mail?.hasError('required')" class="text-danger">
+                        El email es requerido.
+                      </p>
+                      <p *ngIf="Mail?.hasError('email')" class="text-danger">
+                        El formato del email debe ser válido.
+                      </p>
                     </div>
-                <div class="m-3">
-                    <label for="exampleInputPassword1" class="form-label" >Password</label>
-                    <input type="password" class="form-control" formControlName="password" [class.border-danger]="PasswordValid">
-                    <div *ngIf="Password?.errors  && Password?.touched">
-                        <p *ngIf="Password?.hasError('required')" class="text-danger">
-                          El password es requerido.
-                        </p>
-                        <p *ngIf="Password?.errors?.minlength" class="text-danger">
-                          El password debe ser de 8 o más caracteres.
-                        </p>
-                      </div>
+                  </div>
+              <div class="m-3">
+                  <label for="password" class="form-label" >Password</label>
+                  <input type="password" class="form-control" formControlName="password" [class.border-danger]="PasswordValid">
+                  <div *ngIf="Password?.errors  && Password?.touched">
+                      <p *ngIf="Password?.hasError('required')" class="text-danger">
+                        El password es requerido.
+                      </p>
+                      <p *ngIf="Password?.errors?.minlength" class="text-danger">
+                        El password debe ser de 8 o más caracteres.
+                      </p>
                     </div>
-                <div class="m-3">
-                    <button   type="submit" class="btn btn-primary">Iniciar Sesión</button>
-                </div>
-            </form>
-        </div>
-    </div>
+                  </div>
+              <div class="m-3">
+                  <button   type="submit" class="btn btn-primary">Iniciar Sesión</button>
+              </div>
+          </form>
+      </div>
+  </div>
 </div>
+
 <router-outlet></router-outlet>

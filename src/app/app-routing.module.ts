@@ -12,9 +12,12 @@ import { ServiciosComponent } from './pages/servicios/servicios.component';
 import { TransaccionesComponent } from './pages/transacciones/transacciones.component';
 import { MovimientosComponent } from './pages/movimientos/movimientos.component';
 
+
+import { AuthGuard } from './helpers/auth.guard';
+
 const routes: Routes = [
   {path: 'iniciar-sesion', component: IniciarSesionComponent},
-  {path:'home', component: HomeComponent,
+  {path:'home', component: HomeComponent, canActivate: [AuthGuard],
   children:[
     {path:'operaciones', component: OperacionesComponent},
     {path:'transacciones', component: TransaccionesComponent},
@@ -26,6 +29,7 @@ const routes: Routes = [
   {path: 'quienes-somos/:id', component: IntegranteComponent},
   {path: 'registro', component:RegistroComponent},
   {path: '', redirectTo: '/servicios', pathMatch: 'full'},
+
   {path: '**', component: Pagina404Component},
 ];
 
