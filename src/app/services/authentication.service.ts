@@ -15,7 +15,7 @@ export class User
 })
 
 export class AuthenticationService {
-  url="https://reqres.in/api/users/1";
+  url="https://reqres.in/api/login";
   private currentUserSubject: BehaviorSubject<User>;
   public currentUser: Observable<User>;
 
@@ -28,7 +28,7 @@ export class AuthenticationService {
     return this.currentUserSubject.value;
   }
   login(username: string, password: string): Observable<any> {
-    //const pass = bcrypt.hashSync(password);
+    
 
     return this.http.post<any>(this.url, { username, password })
       .pipe(map(user => {
@@ -39,10 +39,7 @@ export class AuthenticationService {
         return user;
       }));
   }
-logout(): void {
-  localStorage.removeItem('currentUser');
- // this.currentUserSubject.next(null);
-}
+
 }
 
 
