@@ -11,10 +11,12 @@ export class NavComponent implements OnInit {
   [x: string]: any;
   estaAutenticado:boolean=false;
   constructor(private authService: AuthService,  private router: Router) {
-    this.estaAutenticado= authService.estaAutenticado;
+   
    }
  
   ngOnInit(): void {
+   this.authService.estaAutenticado.subscribe(res=>( this.estaAutenticado=res));
+   
    
   }
   

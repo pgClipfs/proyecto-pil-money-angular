@@ -9,6 +9,7 @@ import { Usuario } from '../usuario.service';
 })
 export class AuthService {
   url="https://reqres.in/api/login";
+  loggedIn= new BehaviorSubject<boolean>(false);
   currentUserSubject: BehaviorSubject<Usuario>;
   currentUser: Observable<Usuario>;
   constructor(private http:HttpClient) {
@@ -22,6 +23,7 @@ export class AuthService {
       .pipe(map(data => {
         localStorage.setItem('currentUser', JSON.stringify(data ));
         this.currentUserSubject.next(data);
+        this.loggedIn.next(true);
         console.log(data);
         
         return data;
@@ -30,15 +32,18 @@ export class AuthService {
 
   logout(): void{
     localStorage.removeItem('currentUser');
+    this.loggedIn.next(false);
     
   }
 
   get usuarioAutenticado(): Usuario {
+    console.log("esa autenticado" +this.currentUserSubject.value );
     return this.currentUserSubject.value;
   }
 
-  get estaAutenticado(): boolean {
-    return (localStorage.getItem('currentUser') != null) ? true : false;
+  get estaAutenticado(): Observable<boolean> {
+   
+    return this.loggedIn.asObservable();
   }
 }
 
