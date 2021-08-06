@@ -1,0 +1,32 @@
+.containerOwnApp	{
+	box-shadow: 0 0 27px 0 rgba(84, 84, 84, 0.62);
+	padding-top: 15px;
+}
+
+.registro-page {
+  padding: 18% 0 0;
+  margin: 0 auto 20px;
+  max-width: 360px;
+  position: relative;
+}
+
+.registro-form {
+	box-shadow: 0 0 27px 0 rgba(84, 84, 84, 0.62);
+}
+
+.registro-form-header{
+	padding-top: 16px;
+}
+
+.registro-from-row {
+	padding-top: 16px;
+	padding-bottom: 16px;
+}
+
+.registro-form-font-header {
+	font-size:30px; 
+	font-weight: bold;
+}
+.registro-form-font-header span {
+	color: #007C9B;
+}

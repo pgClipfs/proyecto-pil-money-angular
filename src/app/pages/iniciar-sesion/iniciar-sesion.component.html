@@ -7,10 +7,10 @@
   </div>
   <div class="row m-3">
       <div class="col-md-12 login-form">
-          <form [formGroup]="form" (ngSubmit)="onSubmit()">    
+          <form [formGroup]="form" (ngSubmit)="onEnviar($event, usuario)">    
               <div class="m-3">
                   <label for="email" class="form-label">Email</label>
-                  <input type="email" class="form-control" formControlName="mail" [class.border-danger]="MailValid">
+                  <input type="email" class="form-control" formControlName="mail" [class.border-danger]="MailValid" [(ngModel)]="usuario.email">
                   <div *ngIf="Mail?.errors  && Mail?.touched">
                       <p *ngIf="Mail?.hasError('required')" class="text-danger">
                         El email es requerido.
@@ -22,7 +22,7 @@
                   </div>
               <div class="m-3">
                   <label for="password" class="form-label" >Password</label>
-                  <input type="password" class="form-control" formControlName="password" [class.border-danger]="PasswordValid">
+                  <input type="password" class="form-control" formControlName="password" [class.border-danger]="PasswordValid" [(ngModel)]="usuario.password">
                   <div *ngIf="Password?.errors  && Password?.touched">
                       <p *ngIf="Password?.hasError('required')" class="text-danger">
                         El password es requerido.

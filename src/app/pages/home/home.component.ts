@@ -13,13 +13,9 @@ export class HomeComponent implements OnInit {
               ) { }
 
   ngOnInit(): void {
-    this.getUserLogged();
+    
   }
-  getUserLogged() {
-    this.UsuarioService.getUser().subscribe(( Usuario: any) => {
-      console.log( Usuario);
-      //  this.cookies.delete("token");
-    });
-  }
+
+  
 
 }
