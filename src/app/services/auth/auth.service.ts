@@ -37,7 +37,6 @@ export class AuthService {
   }
 
   get usuarioAutenticado(): Usuario {
-    console.log("esa autenticado" +this.currentUserSubject.value );
     return this.currentUserSubject.value;
   }
 
