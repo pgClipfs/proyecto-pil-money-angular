@@ -12,8 +12,7 @@ import { ServiciosComponent } from './pages/servicios/servicios.component';
 import { TransaccionesComponent } from './pages/transacciones/transacciones.component';
 import { MovimientosComponent } from './pages/movimientos/movimientos.component';
 
-
-import { AuthGuard } from './helpers/auth.guard';
+import { AuthGuard } from './services/auth/auth.guard';
 
 const routes: Routes = [
   {path: 'iniciar-sesion', component: IniciarSesionComponent},

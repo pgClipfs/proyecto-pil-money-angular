@@ -6,19 +6,28 @@
       <p class="navbar-brand mb-2">Mi aplicación</p>
       <div class="collapse navbar-collapse">
         <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-          <li class="nav-item">
+          <li *ngIf="estaAutenticado" class="nav-item">
+            <a class="nav-link" routerLink="/home"  aria-current="page">HOME</a>
+          </li>
+          <li  class="nav-item">
             <a class="nav-link"  routerLink="/servicios"  aria-current="page">SERVICIOS</a>
           </li>
-          <li class="nav-item">
+          <li  class="nav-item">
             <a class="nav-link"  routerLink="/quienes-somos"  aria-current="page">¿QUIENES SOMOS?</a>
           </li>
-          <li class="nav-item">
+          <li *ngIf="!estaAutenticado" class="nav-item">
             <a class="nav-link" routerLink="/registro"  aria-current="page">REGISTRARSE</a>
           </li>
-          <li class="nav-item">
+          <li *ngIf="!estaAutenticado" class="nav-item">
             <a class="nav-link" routerLink="/iniciar-sesion"  aria-current="page">INICIAR SESIÓN</a>
+          </li>
+          <li *ngIf="estaAutenticado" class="nav-item">
+            <a class="nav-link" (click)="onCerrarSesion()"  aria-current="page">CERRAR SESIÓN</a>
           </li>
         </ul>
       </div>
     </div>
   </nav>
+  <ng-template #viewHome>
+ 
+  </ng-template>
